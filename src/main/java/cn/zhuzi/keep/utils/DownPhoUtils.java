@@ -8,7 +8,6 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.jsoup.helper.StringUtil;
-import org.junit.Test;
 
 public class DownPhoUtils {
 
@@ -23,8 +22,8 @@ public class DownPhoUtils {
 			e.printStackTrace();
 		} catch (IOException e) {
 			try {
-				FileUtils.write(SysConstant.CONNECT_OUT_FILE, username + "<>" + img + "<>" + saveFile, true);
-				FileUtils.write(SysConstant.CONNECT_OUT_FILE, SysConstant.NEXT_LINE, true);
+				FileUtils.write(SysConstant.CONNECT_OUT_FILE, username + "<>" + img + "<>" + saveFile, SysConstant.CHARSET, true);
+				FileUtils.write(SysConstant.CONNECT_OUT_FILE, SysConstant.NEXT_LINE, SysConstant.CHARSET, true);
 				// Unix 的换行 \n ;Mac -->\r
 			} catch (IOException e1) {
 			}
@@ -37,10 +36,8 @@ public class DownPhoUtils {
 	 */
 	public static void downConnectOut() {
 		try {
-
 			while (true) {
-
-				List<String> readLines = FileUtils.readLines(SysConstant.CONNECT_OUT_FILE);
+				List<String> readLines = FileUtils.readLines(SysConstant.CONNECT_OUT_FILE, SysConstant.CHARSET);
 				if (SysConstant.NEXT_LINE.equals(readLines.toString())) {
 					break;
 				}
@@ -52,7 +49,6 @@ public class DownPhoUtils {
 						String[] split = line.split("<>");
 						downPic(split[1], split[0]);
 					}
-
 				}
 			}
 		} catch (IOException e) {

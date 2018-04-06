@@ -54,4 +54,6 @@ public class SysConstant {
 	 * 回车换行
 	 */
 	public static final CharSequence NEXT_LINE="\r\n";
+	
+	public static final String CHARSET="UTF-8";
 }
