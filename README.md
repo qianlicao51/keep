@@ -1,5 +1,6 @@
 # keep
 ## 获取keep关注人相册 ##
+
 使用jsoup和fiddler4。分析请求地址。使用jsoup获取请求到的json。从中得到图片URL。需要注意的是安卓手机屏幕滚动刷新。分析得出。上一次请求最后一个图片ID，是下一次请求的参数
     
 	public SysDownThread(AttenInfo attenInfo) {
@@ -50,3 +51,6 @@
 			e.printStackTrace();
 		}
 	}
+
+## 配置信息 ##
+    配置信息在  cn.zhuzi.keep.utils.SysConstant.java 里面
