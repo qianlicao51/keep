@@ -13,7 +13,7 @@ public class SysConstant {
 	/**
 	 * 认证信息val
 	 */
-	private static final String Ahthor_VAL = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NjgzNGEwYjdkODAzZTRjM2E1Y2QzNjciLCJ1c2VybmFtZSI6IuerueWtkDUxIiwiYXZhdGFyIjoiaHR0cDovL3N0YXRpYzEuZ290b2tlZXAuY29tL2F2YXRhci8yMDE1LzEyLzMwLzExLzc5YjA1OWVjNWQzOGI1M2M2NTE0MGYyZDUyNzQwMzljMDNlZGM0OWUuanBnIiwiZ2VuZGVyIjoiTSIsImRldmljZUlkIjoiODY5MDE0MDI4NDg3OTQxNjgzZTM0YzRmOGU0MTExMTEwYzJhZjQyOSIsImlzcyI6Imh0dHA6Ly93d3cuZ290b2tlZXAuY29tLyIsImV4cCI6MTUzMTU3NTM4NiwiaWF0IjoxNTIyOTM1Mzg2fQ.cZepoPPf_DnStLUQjjeJnxbnWCIrQf8ILJA0AFVZA3s";
+	private static final String Ahthor_VAL = "Bearer .cZepoPPf_DnStLUQjjeJnxbnWC*******************s";
 
 	static {
 		headMap.put(Ahthor_KEY, Ahthor_VAL);
