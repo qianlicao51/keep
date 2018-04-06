@@ -12,8 +12,7 @@ import org.jsoup.helper.StringUtil;
 public class DownPhoUtils {
 
 	public static void downPic(String img, String username) {
-		String imgSub = img.substring(img.indexOf(SysConstant.PIC_URL_PRE) + SysConstant.PIC_URL_PRE.length());
-		File saveFile = new File(SysConstant.SAVE_FILE, username + "/" + imgSub.replaceAll("/", "-"));
+		File saveFile = getFilePosition(img, username);
 		try {
 			if (!saveFile.exists()) {
 				FileUtils.copyURLToFile(new URL(img), saveFile, 5000, 5000);
@@ -53,5 +52,10 @@ public class DownPhoUtils {
 			}
 		} catch (IOException e) {
 		}
+	}
+
+	public  static File getFilePosition(String img, String username) {
+		String imgSub = img.substring(img.indexOf(SysConstant.PIC_URL_PRE) + SysConstant.PIC_URL_PRE.length());
+		return new File(SysConstant.SAVE_FILE, username + "/" + imgSub.replaceAll("/", "-"));
 	}
 }

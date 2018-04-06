@@ -38,8 +38,14 @@ public class SysDownThread extends Thread {
 				lastId = pho.getId();
 				List<String> images = pho.getImages();
 				for (String img : images) {
+					// 如果图片存在，则表示 之后的图片也存在
+					File filePosition = DownPhoUtils.getFilePosition(img, attenInfo.getUsername());
+					if (filePosition.exists()) {
+						stop = false;
+					} else {
 
-					DownPhoUtils.downPic(img, attenInfo.getUsername());
+						DownPhoUtils.downPic(img, attenInfo.getUsername());
+					}
 				}
 			}
 			while (stop) {

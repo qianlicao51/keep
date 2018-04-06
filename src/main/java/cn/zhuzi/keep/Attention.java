@@ -1,16 +1,11 @@
 package cn.zhuzi.keep;
 
-import static org.junit.Assert.*;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.joda.time.DateTime;
-import org.jsoup.Connection.Response;
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.junit.Test;
 
 import cn.zhuzi.keep.bean.AttenInfo;
 import cn.zhuzi.keep.json.AttenJson;
