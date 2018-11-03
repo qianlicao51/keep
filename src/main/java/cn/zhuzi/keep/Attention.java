@@ -1,11 +1,14 @@
 package cn.zhuzi.keep;
 
+import static org.junit.Assert.*;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.joda.time.DateTime;
 import org.jsoup.Jsoup;
+import org.junit.Test;
 
 import cn.zhuzi.keep.bean.AttenInfo;
 import cn.zhuzi.keep.json.AttenJson;
@@ -61,5 +64,13 @@ public class Attention {
 		System.out.println("开始时间" + new DateTime(start).toString("yyyy-MM-dd HH:mm:ss"));
 		System.out.println("结束时间" + new DateTime(end).toString("yyyy-MM-dd HH:mm:ss"));
 
+	}
+
+	@Test
+	public void testName() throws Exception {
+
+		// author=&#65288;&#32654;&#65289;&#38463;&#23572;&#24343;&#38647;&#24503;&bull;C&bull;&#37329;&#36187;
+	
+		System.out.println("65288".getBytes());
 	}
 }
